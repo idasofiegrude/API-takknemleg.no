@@ -51,7 +51,7 @@ def hent_svar():
         # json skrives akkuratt som ordbøker i python - så derfor kan man bare gjøre det om til dette
 
         svar_liste = [{"overskrift": svar.overskrift, "svar_innhold": svar.svar_innhold, "svar_id": svar.svar_id} for svar in alle_svar]
-
+        svar_liste.reverse()
         # Returner svar
         return jsonify(svar_liste)
 
